@@ -1,8 +1,22 @@
 <app-header></app-header>
-    <div class="element">
-        <app-element-left></app-element-left>
-        <app-element-right></app-element-right>
-        <div class="clear"></div>
-    </div>
+<div class="element">
+
+    <app-element-left
+            [DATA]="DATA"
+            [topImg]="topImg"
+            [changeImg]="changeImg"
+            [changeSection]="changeSection"
+            [changeWeather]="changeWeather"
+    ></app-element-left>
+
+    <app-element-right
+           [DATA]="DATA"
+           [megaAddress]="megaAddress"
+           [topImg]="topImg"
+    ></app-element-right>
+
+    <div class="clear"></div>
+</div>
+
 <app-footer></app-footer>
 

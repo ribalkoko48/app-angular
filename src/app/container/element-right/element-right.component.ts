@@ -1,15 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ViewEncapsulation, Input} from '@angular/core';
+import {DATA, Data} from '../../weathersData'
 
 @Component({
-  selector: 'app-element-right',
-  templateUrl: './element-right.component.html',
-  styleUrls: ['./element-right.component.css']
+    selector: 'app-element-right',
+    templateUrl: './element-right.component.html',
+    styleUrls: ['./element-right.component.css']
 })
-export class ElementRightComponent implements OnInit {
+export class ElementRightComponent{
 
-  constructor() { }
+     @Input()
+    public DATA:Data;
 
-  ngOnInit() {
-  }
+    @Input()
+    public megaAddress: string;
+    
+    @Input()
+    public topImg:number | string;
+    
+    public onClick(aaa) {
+        console.log(aaa)
+    }
 
 }
