@@ -1,4 +1,4 @@
-import {Component, ViewEncapsulation, Input, Output} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Data} from '../../weathersData'
 
 
@@ -8,32 +8,36 @@ import {Data} from '../../weathersData'
     styleUrls: ['./element-left.component.css']
 })
 export class ElementLeftComponent {
+    
+    
+     @Output()
+      public changeWeather: EventEmitter<string> = new EventEmitter();
 
     @Input()
     public DATA:Data;
 
     @Input()
-    public topImg:number | string
+    public topImg:number | string;
 
     @Input()
-    public changeImg
+    public changeImg;
 
     @Input()
-    public changeSection
+    public changeSection;
 
-    @Input()
-    public changeWeather
 
     public onclick(img:number | string):void {
         this.changeImg(img)
     }
 
+
     public onClickSection(Section:string):void {
         this.changeSection(Section)
     }
-    
-    public onClickCountry(addr: string):void {
-        this.changeWeather(addr)
+
+
+    public onClickCountry(address):void {
+        this.changeWeather.emit(address)
     }
 
 

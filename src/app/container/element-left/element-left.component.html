@@ -18,7 +18,7 @@
             <div class="activity_box">
                 <div class="scrollbar" id="style-2">
                     <div class="activity-row" *ngFor="let data_obj of DATA">
-                        <div (click)="onClickCountry(data_obj.address)" class="activity-desc">
+                        <div (click)="onClickCountry()" class="activity-desc">
                             <h5>{{data_obj.address}}</h5>
                             <h6>{{data_obj.phone}}</h6>
                         </div>

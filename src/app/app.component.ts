@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Output, EventEmitter} from '@angular/core';
 import {DATA, Data} from './weathersData'
 
 @Component({
@@ -12,7 +12,11 @@ export class AppComponent {
 
     public topImg:number | string = 1
 
-    public megaAddress:string = 'Россия, Сочи'
+    public WEATHER:Data = DATA.filter((data)=> {
+        if (data.address === 'Россия, Сочи') {
+            return data
+        }
+    })[0]
 
     public DATA:Data[] = DATA.filter((data)=> {
         if (data.type === 'Hotel') {
@@ -32,8 +36,8 @@ export class AppComponent {
         })
     }
 
-    public changeWeather(address:string):void {
-        console.log(address)
-        this.megaAddress = address
+    public changeWeather(address) {
+        if (address.target.localName !== 'h5') return
+        this.WEATHER = DATA.find((data) => data.address === address.toElement.innerHTML)
     }
 }

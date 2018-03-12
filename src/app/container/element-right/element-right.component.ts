@@ -1,5 +1,5 @@
-import {Component, ViewEncapsulation, Input} from '@angular/core';
-import {DATA, Data} from '../../weathersData'
+import {Component, Input} from '@angular/core';
+import {Data} from '../../weathersData'
 
 @Component({
     selector: 'app-element-right',
@@ -9,16 +9,5 @@ import {DATA, Data} from '../../weathersData'
 export class ElementRightComponent{
 
      @Input()
-    public DATA:Data;
-
-    @Input()
-    public megaAddress: string;
-    
-    @Input()
-    public topImg:number | string;
-    
-    public onClick(aaa) {
-        console.log(aaa)
-    }
-
+    public WEATHER:Data;
 }

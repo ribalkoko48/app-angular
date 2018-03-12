@@ -6,13 +6,11 @@
             [topImg]="topImg"
             [changeImg]="changeImg"
             [changeSection]="changeSection"
-            [changeWeather]="changeWeather"
+            (click)="changeWeather($event)"
     ></app-element-left>
 
     <app-element-right
-           [DATA]="DATA"
-           [megaAddress]="megaAddress"
-           [topImg]="topImg"
+           [WEATHER]="WEATHER"
     ></app-element-right>
 
     <div class="clear"></div>
