@@ -3,42 +3,40 @@ import {Data} from '../../weathersData'
 
 
 @Component({
-    selector: 'app-element-left',
-    templateUrl: './element-left.component.html',
-    styleUrls: ['./element-left.component.css']
+  selector: 'app-element-left',
+  templateUrl: './element-left.component.html',
+  styleUrls: ['./element-left.component.css']
 })
 export class ElementLeftComponent {
-    
-    
-     @Output()
-      public changeWeather: EventEmitter<string> = new EventEmitter();
 
-    @Input()
-    public DATA:Data;
+  @Input()
+  public DATA: Data;
 
-    @Input()
-    public topImg:number | string;
+  @Input()
+  public topImg: number | string;
 
-    @Input()
-    public changeImg;
+  @Input()
+  public changeImg;
 
-    @Input()
-    public changeSection;
+  @Input()
+  public changeSection;
 
+  @Input()
+  public SECTION;
 
-    public onclick(img:number | string):void {
-        this.changeImg(img)
-    }
+  @Output()
+  public changeWeather: EventEmitter<string> = new EventEmitter();
 
+  @Output()
+  public onClickSection(Section: string): void {
+    this.changeSection(Section)
+  }
 
-    public onClickSection(Section:string):void {
-        this.changeSection(Section)
-    }
+  public onclick(img: number | string): void {
+    this.changeImg(img)
+  }
 
-
-    public onClickCountry(address):void {
-        this.changeWeather.emit(address)
-    }
-
-
+  public onClickCountry(address): void {
+    this.changeWeather.emit(address)
+  }
 }

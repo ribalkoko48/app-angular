@@ -1,19 +1,21 @@
 <app-header></app-header>
 <div class="element">
 
-    <app-element-left
-            [DATA]="DATA"
-            [topImg]="topImg"
-            [changeImg]="changeImg"
-            [changeSection]="changeSection"
-            (click)="changeWeather($event)"
-    ></app-element-left>
+  <app-element-left
+    [DATA]="DATA"
+    [topImg]="topImg"
+    [changeImg]="changeImg"
+    [changeSection]="changeSection"
+    (click)="changeWeather($event)"
+    [SECTION]="SECTION"
+  ></app-element-left>
 
-    <app-element-right
-           [WEATHER]="WEATHER"
-    ></app-element-right>
+  <app-element-right
+    [DATA]="DATA"
+    [ADDRESS]="ADDRESS"
+  ></app-element-right>
 
-    <div class="clear"></div>
+  <div class="clear"></div>
 </div>
 
 <app-footer></app-footer>

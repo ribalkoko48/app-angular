@@ -7,6 +7,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ElementLeftComponent } from './container/element-left/element-left.component';
 import { ElementRightComponent } from './container/element-right/element-right.component';
+import { FiltersPipe } from './common/pipes/filters.pipe';
+import { FindPipe } from './common/pipes/find.pipe';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { ElementRightComponent } from './container/element-right/element-right.c
     HeaderComponent,
     FooterComponent,
     ElementLeftComponent,
-    ElementRightComponent
+    ElementRightComponent,
+    FiltersPipe,
+    FindPipe
   ],
   imports: [
     BrowserModule
