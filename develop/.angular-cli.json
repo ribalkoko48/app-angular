@@ -7,7 +7,6 @@
     {
       "root": "src",
       "outDir": "dist",
-      "deployUrl": "https://ribalkoko48.github.io/app-angular/",
       "assets": [
         "assets",
         "favicon.ico"

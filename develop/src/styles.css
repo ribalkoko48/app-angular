@@ -188,7 +188,7 @@ h1 {
 }
 
 span.line {
-    background: url(/assets/images/line.png) no-repeat;
+    background: url(https://ribalkoko48.github.io/app-angular/assets/images/line.png) no-repeat;
     width: 103px;
     height: 2px;
     display: block;
@@ -196,7 +196,7 @@ span.line {
 }
 
 span.w-line {
-    background: url(/assets/images/w-line.png) no-repeat;
+    background: url(https://ribalkoko48.github.io/app-angular/assets/images/w-line.png) no-repeat;
     width: 103px;
     height: 2px;
     display: block;
@@ -246,7 +246,7 @@ span.w-line {
 }
 
 span.cloud {
-    background: url(/assets/images/cloudy.png) no-repeat;
+    background: url(https://ribalkoko48.github.io/app-angular/assets/images/cloudy.png) no-repeat;
     width: 50px;
     height: 50px;
     display: inline-block;
@@ -283,6 +283,10 @@ span.cloud {
 
 ul li.anc-bor {
     border-right: none;
+}
+
+.link {
+  cursor: pointer;
 }
 
 /*--scroll --*/
